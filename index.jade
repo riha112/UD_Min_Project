@@ -1,0 +1,255 @@
+doctype html
+html(lang="en")
+    head
+        meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Min Gala product Landing page
+        //link(rel="stylesheet", href="https://necolas.github.io/normalize.css/8.0.1/normalize.css")
+        link(rel="stylesheet", href="./css/theme.css")
+    body
+        #PopupMsg.popup
+            .box
+                .popup-close
+                .popup-msg Sorry! Documentation isn't available yet.
+        .wrapper-hidden
+            .wrapper
+                nav#MainNavigation
+                    ul
+                        li
+                            a.is-active(js-scroll-to="#Home") Home
+                        li
+                            a(js-scroll-to="#AboutUs") About Us
+                        li
+                            a(js-scroll-to="#Services") Services
+                        li
+                            a(js-scroll-to="#ContactUs") Contact Us
+
+                header#Home
+                    img(src="./img/blob-01.png").background-blob
+                    .header-info-hld
+                        h1 Data mining & Statistics
+                        p.small "Product Name" is everything you need for automatic data extraction. Quickly scrape web data without coding & turn web pages into structured data within clicks! 
+                        button.btn-more(js-scroll-to="#Services")
+                            | More
+                            span.arrow
+                    .header-illustration-hld
+                        img(src="./img/start-scr-img.png")
+                
+                main
+                    section#AboutUs
+                        h2 
+                            | Ab
+                            span out Us
+                        p.large.about-us-desc 
+                            span.hashtag #
+                            | Hi! We are team of five university students from Latvia,<br> bringing best we can in fields of web scraping & data <br>fetching
+                            //| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et congue est id commodo. Sed purus, mauris in vulputate nunc enim dictum. Erat non etiam ultrices est magna. 
+                        #Team.slider
+                            span.slider-nav-left
+                            .slide.is-active
+                                .person
+                                    .person-image
+                                        img.profile(src="./img/person-ra2.png")
+                                        img.shadow(src="./img/shadow-team.png")
+                                    .person-data
+                                        .person-name Rihards Abolins
+                                        .person-job Dev/Designer
+                                .person
+                                    .person-image
+                                        img.profile(src="./img/person-je.png")
+                                        img.shadow(src="./img/shadow-team.png")
+                                    .person-data
+                                        .person-name Janis Emkens
+                                        .person-job Developer
+                                .person
+                                    .person-image
+                                        img.profile(src="./img/person-md.png")
+                                        img.shadow(src="./img/shadow-team.png")
+                                    .person-data
+                                        .person-name Martins Draudins
+                                        .person-job Developer
+                                .person
+                                    .person-image
+                                        img.profile(src="./img/person-uj.png")
+                                        img.shadow(src="./img/shadow-team.png")
+                                    .person-data
+                                        .person-name Uldis Jansons
+                                        .person-job Developer
+                            .slide
+                                .person
+                                        .person-image
+                                            img.profile(src="./img/person-va.png")
+                                            img.shadow(src="./img/shadow-team.png")
+                                        .person-data
+                                            .person-name Vladislavs Antonuks
+                                            .person-job Developer
+                            span.slider-nav-right
+                        #MissionVision
+                            h3 Mission & Vision
+                            p Our vision is to become the leading organization in fields of web scraping & data fetching, but our mission is to create better and simpler way of data collecting and structuring
+                    section#Services
+                        h2 Services
+                        #DataFetching.slider
+                            span.slider-nav-left
+                            .slide.is-active
+                                .service-data
+                                    h3 Data fetching
+                                    p Use point and click interface to generate structure you desire. The moment you click - field is stored & structure is created. Open website, enable built-in extension and start scraping. "Product Name" handles all the messy work behind the screen for you.
+                                    .grid
+                                        h4 Dynamic websites
+                                        p.small Easily scrape behind JavaScript and AJAX powered websites. Capture anything from webpages by bypassing forms, searches, infinitive scrolls, drop downs & more.
+                                .service-image
+                                    img(src="./img/service-datafiltration-img.png")
+                            .slide
+                                .service-data
+                                    h3 Data types
+                                    p To collect most accurate data we have developed the data type system library that contains over 100+ different packages from simple elements to complex solutions we have it all. With our simple UI all you need to do is point and click.
+                                    .grid
+                                        h4 Costume solution
+                                        p.small Create your own data types with user friendly DataType creation tool. All you need to do is define the rules, by which the data is tailored - and we will do the rest.
+                                .service-image
+                                    img(src="./img/service-data-types-img.png")                            
+                            span.slider-nav-right
+                        #DataFiltration
+                            img(src="./img/blob-02.png").background-blob
+                            .service-data.invert
+                                h3 Data filtration
+                                p Get rid of all damaged, bad or unwanted data with built-in data filtration solution that helps you scratch for information without collecting useless data
+                                .grid
+                                    .item-6
+                                        h4 Query language
+                                        p.small Use our simple query language to define rules by which the data is removed
+                                    .item-6
+                                        h4 UI Filter
+                                        p.small Simple & elegant UI brings power of machine learning to get rid of "bad" or "unwanted" data, you define - we remove 
+                            .service-image
+                                img(src="./img/filtration-img.png")
+                        #MoreServices
+                            h3 And more
+                            p.more-desc To satisfy all you needs for web scrapping we have created many more useful functionalities that are tailored for better, simpler & faster experience
+                            .sliderr.more-slider
+                                span.slider-nav-left
+                                .slide.is-active.grid
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/export.png")
+                                        .feature-data
+                                            .feature-title Data export
+                                            .feature-desc  Move data easily, with integrated support for most common data types
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/live-data-watch.png")
+                                        .feature-data
+                                            .feature-title Live data watching
+                                            .feature-desc  Fetch data only when changes are made!
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/archive.png")
+                                        .feature-data
+                                            .feature-title Archive requests
+                                            .feature-desc  Store request globally up to 30 days or locally as long as you want
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/share.png")
+                                        .feature-data
+                                            .feature-title Share data
+                                            .feature-desc  Share data with friends and co-workers
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/costume-solution.png")
+                                        .feature-data
+                                            .feature-title Build custom solutions
+                                            .feature-desc  Create custom data types, filters, fetchers & more with desktop app
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/schedule.png")
+                                        .feature-data
+                                            .feature-title Scheduler
+                                            .feature-desc  Schedule when to fetch data.
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/live-support.png")
+                                        .feature-data
+                                            .feature-title Live support
+                                            .feature-desc  24/7 live support with certified expert (unlimited)
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/batch.png")
+                                        .feature-data
+                                            .feature-title Batch jobs
+                                            .feature-desc  Use job system to do multiple requests at same time
+                                    .feature.item-4
+                                        .feature-icon
+                                            img(src="./img/icons/most-important.png")
+                                        .feature-data
+                                            .feature-title Most important
+                                            .feature-desc  Summarize large amount of data into most important.
+
+                                span.slider-nav-right
+                    section#DataPlans
+                        h2 Data Plans
+                        .data-plans-hld
+                            .plan.basic-plan
+                                .plan-in-hld
+                                    .plan-title Basic Plan
+                                    .plan-price Free
+                                    ul.plan-items
+                                        li.plan-item Browser extension
+                                        li.plan-item Local use only
+                                        li.plan-item CSV export
+                                        li.plan-item Dynamic Websites
+                                        li.plan-item Manual data filtration
+                                        li.plan-item Basic data type formatting
+                                        li.plan-item 100 requests per month
+                                    button.action Coming soon
+                            .plan.is-active.premium-plan
+                                .plan-in-hld
+                                    .plan-title Premium
+                                    .plan-price $25
+                                        span.month /month
+                                    ul.plan-items
+                                        li.plan-item Basic plan
+                                        li.plan-item Desktop app
+                                        li.plan-item Live data watching
+                                        li.plan-item Scheduler
+                                        li.plan-item 5 Live task limit
+                                        li.plan-item JSON, CSV, XAML file export
+                                        li.plan-item Request archive
+                                        li.plan-item Premium library of data types
+                                        li.plan-item Query language support
+                                        li.plan-item Data share
+                                        li.plan-item 1K requests per month
+                                    button.action Not available
+                            .plan.unlimited-plan
+                                .plan-in-hld
+                                    .plan-title Unlimited
+                                    .plan-price $100
+                                        span.month /month
+                                    ul.plan-items
+                                        li.plan-item Premium plan
+                                        li.plan-item 20 live task limit
+                                        li.plan-item Custom solution builder
+                                        li.plan-item Live support
+                                        li.plan-item No request limitation
+                                    button.action Not available
+                        p.small.plan-note * Free subscription collects anonymous data to improve softwares performance. All collected data is 100% anonymous and will never be viewed by other people
+                    section#ContactUs
+                        img(src="./img/blob-03.png").background-blob
+                        h2 Contact Us
+                        p.contact-us-desc Interested in project or have any questions? - Fell free to say hello!
+                        .contact-details
+                            .contact-type
+                                b phone number
+                                | +371 26 133 921
+                            .contact-type
+                                b e-mail address
+                                | datafetcher@company.com
+                        form(action="./", method="POST")
+                            label(for="ContactUsEmail") Email address
+                            input(type="email", name="email", id="ContactUsEmail" placeholder="name@company.com")
+                            label(for="ContactUsContent") Content
+                            textarea(name="content", cols="30", rows="10", id="ContactUsContent" placeholder="Message...")
+                    footer Copyright © 2019 - Rihards A.
+        script(src="./js/jquery-3.4.1.min.js")
+        script(src="./js/navigation.js")
+        script(src="./js/slider.js")

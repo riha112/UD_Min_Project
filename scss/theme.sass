@@ -1,0 +1,499 @@
+@import properties.sass
+@import grid.sass
+@import mixins.sass
+@import typography.sass
+html 
+    scroll-behavior: smooth
+body
+    padding: 0
+    margin: 0
+    min-width: 1250px
+img::-moz-selection,
+img::selection,
+.hashtag::-moz-selection,
+.hashtag::selection
+    background: transparent
+.popup
+    display: none
+    position: fixed
+    z-index: 10
+    background: rgba(7, 1, 9, 0.9)
+    background: #070109db
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    .box
+        position: relative
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        background: white
+        padding: 1em 2em 2em
+        border-radius: 20px
+        max-width: 500px
+        box-shadow: $shadow
+    &.is-active
+        display: block
+.popup-msg
+    margin-top: 2em
+    clear: both
+    font-size: 1.4em
+    text-align: center
+.popup-close
+    position: relative
+    width: 25px
+    height: 25px
+    float: right
+    cursor: pointer
+    &:hover
+        &:after, &:before
+            background: black
+            transform: rotate(0)
+    &:after, &:before
+        transition: all ease 0.15s
+        content: ""
+        height: 5px
+        width: 25px
+        display: block
+        background: $c-base
+        position: absolute
+        left: 0
+        top: 50%
+    &:after
+        transform: rotate(45deg)
+    &:before
+        transform: rotate(-45deg)
+.wrapper
+    max-width: $main-width
+    margin: auto
+.wrapper-hidden
+    overflow: hidden
+
+a
+    color: $c-base
+    text-decoration: none
+    transition: color ease 0.15s
+
+.btn-more
+    cursor: pointer
+    position: relative
+    transition: left ease 0.1s
+    left: 0
+    &:hover
+        left: 10px
+        background: $c-orange
+        .arrow
+            transform: rotate(90deg)
+            bottom: -11px
+            left: 7px
+    .arrow
+        transition: all ease 0.15s
+        position: relative
+        display: inline-block
+        left: 15px
+        bottom: 2px
+        &:before, &:after
+            content: ""
+            width: 17px
+            height: 5px
+            background: white
+            display: inline-block
+        &:before
+            transform: rotate(45deg)
+            margin-bottom: 25%
+        &:after
+            transform: rotate(-45deg)
+            margin-left: -50%
+            margin-bottom: -2%
+
+#MainNavigation
+    padding: 30px 0
+    ul
+        padding: 0
+        list-style: none
+        li
+            display: inline-block
+            font-size: 1.1em
+            margin-right: 4em
+    .is-active, a:hover
+        cursor: pointer
+        color: #355D88
+    li:last-child a.is-active
+        color: white
+    &.sticky
+        position: fixed
+        padding: 0
+        transform: rotate(90deg) translateX(50%)
+        left: 40px
+        top: 50px 
+        font-size: 0.9em
+        width: 0
+        ul
+            width: 900px
+
+.header-info-hld
+    max-width: 500px
+    width: 80%
+    p
+        font-size: 1.14em
+
+#AboutUs
+    text-align: center
+    h2 
+        position: relative
+        span
+            color: white
+        img
+            display: none
+            position: absolute
+            z-index: 1
+            left: 50%
+            transform: translate(-50%, -50%)
+            height: 50%
+            top: 50%
+.about-us-desc
+    max-width: 740px
+    margin: auto
+    padding: 10px
+    font-size: 1.6em
+    line-height: 1.4em
+    font-weight: 500
+    font-family: $ff-roboto
+    position: relative
+    .hashtag
+        position: absolute
+        font-size: 7em
+        font-family: $ff-poppins
+        left: 0.01em
+        top: 0.15em
+        color: #EBEBEB
+        font-weight: bold
+        z-index: -1
+
+#MissionVision
+    text-align: right
+    h3
+        margin-bottom: 0
+    p
+        margin-top: 0
+        font-size: 1.45em
+
+#Team
+    text-align: center
+    margin: 5em 0 2.5em
+.person
+    display: inline-block
+    width: 24%
+    margin-bottom: 3em
+    cursor: default
+    &:hover
+        .profile
+            top: -20px
+        .shadow
+            max-width: 220px
+        .person-name
+            color: $c-orange
+        .person-job
+            color: $c-yellow
+.person-name
+    font-weight: bold
+    color: $c-purple
+    transition: color ease 0.15s
+    font-size: 1.6em
+    line-height: 1em
+.person-job
+    font-size: 1.4em
+    text-transform: uppercase
+    transition: color ease 0.15s
+
+.person-image
+    min-height: 300px
+    max-width: 240px
+    margin: auto
+    .shadow
+        max-width: 180px
+        margin: 14px auto 0
+        transition: max-width ease 0.2s
+    .profile
+        position: relative
+        top: 0
+        transition: top ease 0.2s
+
+section
+    clear: both
+
+footer
+    text-align: center
+    margin: 6em 0 1em
+    color: #CCC
+    font-size: 0.8em
+
+img
+    display: block
+    max-width: 100%
+
+#Home
+    position: relative
+    margin-bottom: 13em
+    margin-top: 6em
+    .background-blob
+        top: -28em
+        right: -32em
+
+.header-illustration-hld
+    position: absolute
+    top: -9em
+    right: -2em
+    max-width: 713px
+
+.background-blob
+    position: absolute
+    z-index: -1
+
+
+#ContactUs
+    &, h2
+        color: white
+    position: relative
+    .background-blob
+        top: -8em
+        left: calc(50% - 200px)
+        transform: translateX(-50%)
+        max-width: 2800px
+.contact-us-desc
+    font-size: 1.4em
+    max-width: 800px
+.contact-type
+    b
+        padding-right: 10px
+.contact-details
+    margin-bottom: 4em
+form
+    max-width: 800px
+    margin: auto
+label
+    display: block
+    font-weight: bold
+    text-transform: lowercase
+    margin-bottom: 0.5em
+
+input, textarea
+    border: none
+    border-radius: 10px
+    padding: 0.8em
+    display: block
+    width: 100%
+    max-width: 100%
+    margin-bottom: 2em
+    font-family: $ff-poppins
+    color: $c-base
+
+#DataPlans
+    margin-top: -5em
+    h2
+        margin-bottom: 65px
+        text-align: center
+.data-plans-hld
+    max-width: 1142px
+    margin: auto
+    text-align: center
+.plan-in-hld
+    display: flex
+    flex-direction: column
+    padding: 50px 35px
+    box-sizing: border-box
+    min-height: 700px
+.plan 
+    vertical-align: bottom
+    display: inline-block
+    border-radius: 45px
+    background: #f4f4f4
+    width: 30%
+    text-align: center
+    position: relative
+    box-shadow: $shadow
+    margin-left: -4px
+    &.is-active
+        &, .plan-title
+            color: white
+        background: linear-gradient(348.81deg, #5C47D3 2.53%, #9956DD 97.77%)
+        .plan-price
+            color: $c-yellow
+            .month
+                color: #F1F1F1
+        .action
+            background: white
+            color: $c-purple-dark
+    .plan-items
+        flex: auto
+        text-align: left
+    .action
+        width: 216px
+        margin: auto
+        text-align: center
+        padding: 15px
+        margin-top: 20px
+
+.plan-items
+    list-style: none
+    padding: 0
+    font-size: 1.1em
+    line-height: 2.1em
+
+.plan-title
+    font-weight: bold
+    font-size: 2.7em
+    color: $c-purple-light
+
+.plan-price
+    font-weight: bold
+    text-transform: uppercase
+    font-size: 4.5em
+    color: #42077D
+    .month
+        font-size: 0.23em
+        color: #848484
+
+.plan-note
+    margin: 4em 0 15em 0
+
+#Services
+    h2
+        text-align: center
+        margin-top: 2em
+        margin-bottom: 1.5em
+    h3
+        color: $c-purple-light
+    h4
+        color: $c-yellow
+        font-size: 1.7em
+        margin-bottom: -0.5em
+.slider
+    position: relative
+    .slider-nav-left, .slider-nav-right
+        position: absolute
+        width: 100px
+        height: 100px
+        border-left: 25px solid #EBEBEB
+        border-top: 25px solid #EBEBEB
+        top: calc(50% - 50px)
+        z-index: 0
+        cursor: pointer
+        &:hover
+            border-color: #CCC
+    .slider-nav-left
+        left: -70px
+        transition: all ease 0.15s
+        transform: rotate(-45deg)
+        &:hover
+            left: -100px
+    .slider-nav-right
+        right: -70px
+        transition: all ease 0.15s
+        transform: rotate(135deg)
+        &:hover
+            right: -100px
+    .slide
+        position: relative
+        display: none
+        &.is-active
+            display: block
+#DataFetching
+    .service-image
+        right: -55px
+        top: -2em
+        z-index: 1
+    .item-6
+        padding-right: 20px
+        box-sizing: border-box
+#DataFiltration
+    text-align: right
+    position: relative
+    margin: 16em 0 20em
+    &,h3
+        color: white
+    .background-blob
+        right: 0
+        left: auto
+        top: 50%
+        transform: translate(30%,-45%)
+    .service-image
+        left: -100px
+        top: -6.5em
+        width: calc(100% - 440px)
+
+
+.service-image
+    width: calc(100% - 505px)
+    position: absolute
+.service-data
+    max-width: 550px
+    display: inline-block
+    &>p
+        font-size: 1.4em
+        &.small
+            font-size: 1em
+            max-width: 380px
+            display: inline-block
+            font-weight: 400
+
+#MoreServices
+    text-align: center
+.more-desc
+    max-width: 822px
+    margin: auto
+    font-size: 1.4em
+.more-slider
+    margin: 4em 0 8em
+
+.feature
+    width: 33.33%
+    padding: 0 20px
+    box-sizing: border-box
+    margin-top: 1.2em
+    margin-bottom: 7em
+    cursor: pointer
+    &:hover
+        .feature-title
+            color: $c-orange
+        .feature-desc
+            color: #000
+        .feature-icon 
+            img
+                max-width: 82px
+                opacity: 0.8
+    &:nth-child(3n + 1)
+        clear: both
+.feature-title
+    font-size: 1.4em
+    font-weight: bold
+    color: $c-yellow
+    margin: 0.6em 0 0.25em
+    transition: color ease 0.15s
+
+.feature-desc
+    font-size: 1.15em
+    transition: color ease 0.15s
+
+.feature-icon
+    border-radius: 25px
+    display: inline-block
+    width: 160px
+    height: 160px
+    position: relative
+    background: radial-gradient(145.78% 112.72% at 25.21% 94.08%, #E2ECEF 0%, #E7EFE2 100%)
+    img
+        opacity: 0.6
+        max-width: 72px
+        margin: auto
+        position: relative
+        top: 50%
+        transform: translateY(-50%)
+        transition: max-width ease 0.15s
+
+
+script + div
+    opacity: 0
+    max-height: 0
+    max-width: 0
